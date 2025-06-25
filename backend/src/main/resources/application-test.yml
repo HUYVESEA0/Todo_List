@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+    
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    
+  h2:
+    console:
+      enabled: true
+
+# JWT Configuration for testing
+jwt:
+  secret: testSecretKey123456789012345678901234567890
+  expiration: 3600000 # 1 hour for testing
+
+logging:
+  level:
+    com.todoapp: DEBUG
